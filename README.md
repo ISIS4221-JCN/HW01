@@ -1,10 +1,9 @@
-# Natural Language Processing
+# Natural Language Processing - HomeWork 01
 
-## HomeWork 01
-
-### Juan David García Hernández
-### Nicolás Rocha Pacheco
-### César Daniel Garrido Urbano
+## Developers
+* Juan David García Hernández
+* Nicolás Rocha Pacheco
+* César Daniel Garrido Urbano
 
 This repository gathers the notebooks developed to answer the first task of
 ISIS4221-Natural Language Processing 2021-10.
