@@ -5,10 +5,11 @@
 * Nicolás Rocha Pacheco
 * César Daniel Garrido Urbano
 
+
+## Contents
 This repository gathers the notebooks developed to answer the first task of
 ISIS4221-Natural Language Processing 2021-10.
 
-## Contents
 1. Information Retrieval Metrics:
   1. Precision.
   2. Precision at K.
