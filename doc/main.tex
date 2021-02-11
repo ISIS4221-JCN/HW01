@@ -1,8 +1,83 @@
-\documentclass{article}
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
+\title{HomeWork - 01}
+\date{\today}
 
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\thepage}
+
+\addto\captionsspanish{
+  \renewcommand{\contentsname}%
+    {Table of Contents}%
+}
 
 \begin{document}
-    Hello World!
-    Puto el que lo lea
+    \pagestyle{fancy}
+    \fancyhf{}
+
+    \lhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=30mm]{images/Logo2.png}} \end{picture}}
+    \renewcommand{\headrulewidth}{0.7pt}
+    \fancyhead[R]{Natural Language Processing - HW01}
+\fancyfoot[R]{\thepage}
+
+\begin{titlepage}
+	\centering
+    \includegraphics[scale = 0.45]{images/Logo.png}\\[0.5 cm]	% University Logo
+    \textsc{\large Los Andes University\\
+        \vspace{0.2cm} 
+        Engineering School\\
+        \vspace{0.3cm} 
+        HomeWork 01}\\[2.0 cm]	% University Name
+	\textsc{\Large Natural Language Processing}\\[0.5 cm]
+	% Course Code
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \LARGE \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	
+	\large
+			\emph{Presented by:} \\
+			Juan David García Hernández\\
+			Nicolás Rocha Pacheco\\
+			César Daniel Garrido Urbano\\
+	\vfill
+	\large
+			\emph{Presented to:}\\
+			Rubén Francisco Manrique Pirmanrique\\
+\end{titlepage}
+
+\thispagestyle{empty}
+\tableofcontents
+\pagebreak
+
+\setcounter{page}{1}
+\section{IR Evaluation Metrics}
+\section{Binary Search}
+\section{Binary Search using Inverted Index}
+\section{Basic Ranked Retrieval}
+\section{GENSIM Corpus and tf.idf model}
+\section{Result Analysis}
+
+\newpage
+\bibliographystyle{unsrt}
+\bibliography{biblist.bib}
+
 \end{document}
