@@ -1,0 +1,32 @@
+La técnica de recuperación clasificada con vectorización de documentos se basa en asignar una calificación a la similaridad a dos vectores, uno de los cuales corresponde a un documento y el otro a la consulta. La similaridad entre los dos vectores se obtiene con base en la similaridad el coseno, pues otro tipo de distancias como Euclidiana o Manhattan no permitirían obtener un valor adecuando. La similaridad del coseno está dada por la ecuación \ref{eq:cosine}.
+\begin{equation}
+    cos(\vec{q}, \vec{d}) = \frac{\sum_{i=1}^{|V|}q_id_i}{\sqrt{\sum_{i=1}^{|V|}q_i^2} \sqrt{\sum_{i=1}^{|V|}d_i^2}}
+    \label{eq:cosine}
+\end{equation}
+
+Allí $q$ hace referencia a la consulta, por su inicial en ingles (\textit{query}) y $d$ hace referencia al documento con el que se está comparando la consulta. $|V|$ hace referencia al tamaño del vocabulario, el cual, en este caso es de m.\\
+
+El proceso de vectorización de cada documento se obtiene con base en el modelo \textit{tf-idf}. Este indica que cada documento o consulta se representa con un vector con tamaño del vocabulario en donde cada registro indica un peso asignado a un término específico en relación a ese documento. Cada peso se obtiene con base en la ecuación \ref{eq:tfidf}.
+
+\begin{equation}
+    w_{t,d} = tf * idf_{t,d} = log(1 + tf_{t,d}) * log_{10}\frac{N}{df_t}
+    \label{eq:tfidf}
+\end{equation}
+
+Cada una de las variables se describen a continuación:
+\begin{itemize}
+    \item $w$: Peso resultante.
+    \item $t$: Índice del término.
+    \item $d$: Índice del documento.
+    \item $tf_{t,d}$: Frecuencia del término $t$ en el documento $d$.
+    \item $df_{t}$: Frecuencia de documento. Corresponde al total de documentos que contienen el término $t$. 
+    \item $idf$: Frecuencia de documento invertida. Corresponde al total inverso de documentos que contienen el término $t$ al menos una vez.
+    \item $N$: Tamaño total del corpus.
+\end{itemize}
+
+Como retorno se organiza los documentos según la similaridad que presentan. Podría tenerse en cuenta un umbral para descartar documentos con baja similaridad.
+
+\subsubsection{Explicación de la implementación}
+Como se solicita en las instrucciones, se inicia con la implementación de una función que permita obtener el vector que representa cada documento con base en el peso $w_{t,d}$. Para ello, se inicia creando una matriz en donde se registra qué términos contiene cada documento con el fin de obtener un vector $idf$, el cual se multiplica con el logaritmo de la suma de 1 con la frecuencia del término asociado en el documento correspondiente.\\
+
+Esta función se utiliza para calcular la similaridad del coseno entre el vector retornado para la consulta y para el documento. Finalmente, se organizan los valores retornados para cada documento para seleccionar aquellos que resultan relevantes.
