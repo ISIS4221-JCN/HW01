@@ -10,7 +10,7 @@
 \usepackage{vmargin}
 \setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 
-\title{HomeWork - 01}
+\title{Tarea - 01}
 \date{\today}
 
 \makeatletter
@@ -27,7 +27,7 @@
 
 \addto\captionsspanish{
   \renewcommand{\contentsname}%
-    {Table of Contents}%
+    {Tabla de contenido}%
 }
 
 \begin{document}
@@ -36,31 +36,31 @@
 
     \lhead{\begin{picture}(0,0) \put(0,0){\includegraphics[width=30mm]{images/Logo2.png}} \end{picture}}
     \renewcommand{\headrulewidth}{0.7pt}
-    \fancyhead[R]{Natural Language Processing - HW01}
+    \fancyhead[R]{Procesamiento de lenguaje natural - Tarea 01}
 \fancyfoot[R]{\thepage}
 
 \begin{titlepage}
 	\centering
     \includegraphics[scale = 0.45]{images/Logo.png}\\[0.5 cm]	% University Logo
-    \textsc{\large Los Andes University\\
+    \textsc{\large Universidad de los Andes\\
         \vspace{0.2cm} 
-        Engineering School\\
+        Facultad de ingeniería\\
         \vspace{0.3cm} 
-        HomeWork 01}\\[2.0 cm]	% University Name
-	\textsc{\Large Natural Language Processing}\\[0.5 cm]
+        Tarea 01}\\[2.0 cm]	% University Name
+	\textsc{\Large Procesamiento de lenguaje natural}\\[0.5 cm]
 	% Course Code
 	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	{ \LARGE \bfseries \thetitle}\\
 	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
 	
 	\large
-			\emph{Presented by:} \\
+			\emph{Presentado por:} \\
 			Juan David García Hernández\\
 			Nicolás Rocha Pacheco\\
 			César Daniel Garrido Urbano\\
 	\vfill
 	\large
-			\emph{Presented to:}\\
+			\emph{Presentado a:}\\
 			Rubén Francisco Manrique Pirmanrique\\
 \end{titlepage}
 
@@ -69,17 +69,23 @@
 \pagebreak
 
 \setcounter{page}{1}
-\section{IR Evaluation Metrics}
+\section*{Introducción}
+\input{doc/Intro}
+\section{Métricas de evaluación para Recuperación de Información}
 \input{doc/EvMetrics}
-\section{Binary Search}
+\section{Estrategias de recuperación de información}
+\input{doc/IntroIR}
+\subsection{Búsqueda binaria (BS)}
 \input{doc/BinarySearch}
-\section{Binary Search using Inverted Index}
+\subsection{Búsqueda binaria usando índice invertido (BSII)}
 \input{doc/BinarySearch.II}
-\section{Basic Ranked Retrieval}
+\subsection{Recuperación clasificada básica (RRI)}
 \input{doc/RankedRetrieval}
-\section{GENSIM Corpus and tf.idf model}
+\subsection{Recuperación clasificada y vectorización de documentos}
+\input{doc/RRDV}
+\subsection{GENSIM Corpus y modelo tf.idf}
 \input{doc/tdidf}
-\section{Result Analysis}
+\section{Análisis de resultados}
 \input{doc/Result}
 
 \newpage
