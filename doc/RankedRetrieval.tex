@@ -22,7 +22,7 @@ Por su parte, la cantidad de documentos en los que aparece un termino (\textit{d
 Así las cosas, para obtener el peso de cada término para cada documento simplemente se multiplican los dos pesos explicados en (\ref{tf}) y (\ref{idf}). COn esto se obtiene: 
 
 \begin{equation}
-    w_{t,d} = tf * idf_{t,d} = log(1 + tf_{t,d}) * log_{10}\frac{N}{df_t}
+    w_{t,d} = tf * idf_{t,d} = log(1 + tf_{t,d}) * log_{10}\left(\frac{N}{df_t}\right)
     \label{eq:tfidf}
 \end{equation}
 
