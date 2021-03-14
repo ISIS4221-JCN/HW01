@@ -27,7 +27,7 @@ Ahora bien, una vez se tiene el vector que representa la consulta y la matriz qu
 
 Como es de esperarse es poco común que un documento contenga exactamente todos los términos al igual que es muy probable que algún documento tenga al menos uno de los términos, ocasionando el fenómeno conocido como \textit{feast and famine}. Este indica que las consultas binarias tienen la desventaja de devolver muy pocos o ningún documento (\textit{famine}) en el caso de AND o devolver demasiados documentos (\textit{feast}) al usar OR.
 
-\subsubsection{Explicación de la implementación}
+\subsubsection{Implementación}
 En el \textit{notebook} \url{HW01_2.ipynb} se presenta la implementación de la técnica descrita previamente.\\
 
 En primer lugar se procede con la construcción de la matriz. Para ello, después de importar los \textit{corpus} tanto de vocabulario como de consultas, se recorre cada uno de los documentos insertando un '1' en los registros correspondientes de la matriz. Dichos registros son las coordenadas de la matriz en donde el número de documento corresponde al que se está recorriendo y el término a aquel encontrado en el documento.\\
