@@ -136,8 +136,6 @@ Si una consulta contiene más de dos términos es necesario establecer una estra
 
 
 \subsubsection{Implementación}
-
-\paragraph{Construcción del Índice Invertido}
 Teniendo en cuenta que la implementación se haría en Python y que esta sería ejecutada en una máquina, se podría partir de la estrategia SPIMI para construir el índice invertido. Esta decisión se toma en base a las siguientes consideraciones:
 
 \begin{itemize}
@@ -146,10 +144,7 @@ Teniendo en cuenta que la implementación se haría en Python y que esta sería 
     \item Con la implementación de listas nativas de Python no es necesario alocar memoria directamente desde el algoritmo. Python hace esto sin que el programador deba indicarlo explícitamente.
 \end{itemize}
 
-Aprovechando dicha estrategia se tiene que el conjunto de datos es almacenado enteramente en la memoria, por lo que no es necesario implementar una estrategia de lectura en el almacenamiento secundario. En este sentido, la implementación lee los documentos del conjunto de datos de modo tal que se cree una pareja con el término y el identificador del documento. Inicialmente se tiene un diccionario cuya llave (\textit{key}) es el término y el valor (\textit{value}) corresponde a una lista donde se van agregando los identificadores de los documentos. Una vez se han procesado todos los documentos se convierte dicho diccionario en una matriz de Numpy que es almacenada en disco para su uso posterior. 
-
-\paragraph{Consulta al Índice Invertido}
-Para la 
+Aprovechando dicha estrategia se tiene que el conjunto de datos es almacenado enteramente en la memoria, por lo que no es necesario implementar una estrategia de lectura en el almacenamiento secundario. En este sentido, la implementación lee los documentos del conjunto de datos de modo tal que se cree una pareja con el término y el identificador del documento. Inicialmente se tiene un diccionario cuya llave (\textit{key}) es el término y el valor (\textit{value}) corresponde a una lista donde se van agregando los identificadores de los documentos. Una vez se han procesado todos los documentos se convierte dicho diccionario en una matriz de Numpy que es almacenada en disco para su uso posterior.  
 
 
 
