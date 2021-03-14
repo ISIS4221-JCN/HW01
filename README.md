@@ -4,6 +4,8 @@ ISIS4221-Natural Language Processing 2021-10.
 
 The instructions are available in _HW01-ISIS4221.pdf_.
 
+Detailed explanation can be found at _HW01.pdf_.
+
 ## Dataset
 The used dataset contains 331 _.naf_ files that include title, document id and
 text, 35 _.naf_ files with queries and a _.tsv_ file with the relevant documents
@@ -27,5 +29,6 @@ according to human judges.
 2. Binary search.
 3. Binary search using Inverted Index.
 4. Basic Ranked Retrieval.
-5. GENSIM Corpus and tf.idf model.
-6. Results analysis.
+4. Ranked Retrieval and Document Vectorization
+6. GENSIM Corpus and tf.idf model.
+7. Results analysis.

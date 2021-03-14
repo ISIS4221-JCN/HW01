@@ -25,10 +25,23 @@ El recall es una métrica complementaria a la precisión en la cual se calcula e
 \end{equation}
 
 \subsection{Precisión-Promedio}
-Esta métrica combina la precisión y el recall para una búsqueda de información clasificada por orden. En esta métrica se calcula el promedio de la precisión sobre los documentos recuperados que son relevantes a la búsqueda. Esto permite obtener una noción de qué tan bien clasificados están los documentos recuperados por el sistema de búsqueda de información.
+Esta métrica combina la precisión y el recall para una búsqueda de información clasificada por orden. En esta métrica se calcula el promedio de la precisión sobre los documentos recuperados que son relevantes a la búsqueda. Esto permite obtener una noción de qué tan bien clasificados están los documentos recuperados por el sistema de búsqueda de información. Para calcular la precisión-promedio se realizan los siguientes pasos:
+
+\begin{enumerate}
+    \item Se itera sobre cada documento recuperado del conjunto correspondiente.
+    \item Si el documento del rango $K$ es relevante a la búsqueda, es decir, cuando el recall en ese rango aumenta, se calcula la precisión en dicho $K$.
+    \item Una vez se han evaluado todos los documentos relevantes, lo cual implica un recall del $100\%$ se promedian las precisiones.
+\end{enumerate}
 
 \subsection{MAP}
+La media de precisión promedio (MAP, \textit{Mean Average Precision}) es una métrica que permite evaluar el sistema como un global. En otras palabras, mientras que la precisión promedio es una métrica para una búsqueda en particular, la MAP es una métrica para un conjunto de búsquedas. El proceso para calcular esta MAP consiste en calcular la precisión-promedio para varias búsquedas y luego calcular su media aritmética.
 
 \subsection{DCG}
+La ganancia descontada acumulada (DCG, \textit{Discounted Cumulative Gain}) es una métrica que permite evaluar búsquedas de documentos relevantes que son clasificados y categorizados según su relevancia. Esta métrica permite evaluar que los $K$ documentos mejor clasificados son recuperados le sean útiles al usuario que lleva a cabo la búsqueda. La ecuación (\ref{}) presenta la expresión matemática para calcular esta métrica.
+
+\begin{equation}
+    DCG@K = \sum_{i=1}^{K} \frac{REL_{i}}{log_{2}(max(i, 2))}
+\end{equation}
 
 \subsection{NDCG}
+Es una variación de la DCG en la cuál se normaliza el valor sobre el mejor ordenamiento posible de una búsqueda en particular. En otras palabras, esta métrica resulta del cociente entre el DCG calculado en un rango $K$ y el DCG del mejor ordenamiento para dicho rango $K$. Para obtener el mejor ordenamiento es necesario organizar los documentos según su relevancia de mayor a menor.
