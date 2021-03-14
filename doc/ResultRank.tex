@@ -1,0 +1,38 @@
+\subsection{Comparación de estrategias clasificadas (\textit{ranked}): RRI, RRDV, GENSIM }
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{doc/images/P@M_Ranked.png}
+    \caption{Resultados de P@M para todas las queries del data set con las estrategias clasificadas (\textit{ranked})}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{doc/images/R@M_Ranked.png}
+    \caption{Resultados de R@M para todas las queries del data set con las estrategias clasificadas (\textit{ranked})}
+    \label{fig:my_label}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{doc/images/NDCG@M_Ranked.png}
+    \caption{Resultados de NDCG@M para todas las queries del data set con las estrategias clasificadas (\textit{ranked})}
+    \label{fig:my_label}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\label{tab:rankedResults}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Estrategia} & \multicolumn{1}{l|}{\textbf{Mean P@M}} & \multicolumn{1}{l|}{\textbf{Mean R@M}} & \multicolumn{1}{l|}{\textbf{Mean NDCG@M}} & \multicolumn{1}{l|}{\textbf{MAP}} \\ \hline
+\textbf{RRI} & 0.6287 & 0.6144 & 0.7317 & 0.7340 \\ \hline
+\textbf{RRDV} & 0.5923 & 0.5780 & 0.6967 & 0.6972 \\ \hline
+\textbf{Gensim} & 0.5955 & 0.5812 & 0.6618 & 0.6592 \\ \hline
+\end{tabular}
+\caption{Resumen de resultados de desempeño para las estrategias clasificadas (\textit{ranked}).}
+\end{table}
+

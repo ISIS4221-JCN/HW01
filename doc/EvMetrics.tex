@@ -1,8 +1,22 @@
+Antes de realizar una implementación de un sistema de búsqueda de información es necesario definir métricas de evaluación. Las métricas de evaluación van a permitir comparar cuantitativamente los diferentes sistemas e implementaciones. A lo largo de este documento se usarán siete métricas diferentes: precisión, precisión en K, recall en K, precisión-promedio, MAP, DCG y NDCG. A lo largo de esta sección se introducen las métricas, su interpretación y la metodología usada para su cálculo. 
+
 \subsection{Precisión}
+La precisión es una métrica que permite evaluar qué porcentaje del resultado de una consulta es relevante para la búsqueda. Teniendo en cuenta que en el problema de la búsqueda de información retorna conjuntos de elementos discretos, la precisión ($P$) se puede definir como se presenta en la ecuación (\ref{eq:precision}). En dicha ecuación se evalúa la cardinalidad de la intersección del conjunto de elementos retornados por el sistema de búsqueda de información y el conjunto de los documentos que efectivamente son relevantes a la búsqueda. Este valor es normalizado a partir de la cardinalidad del conjunto de documentos retornados.
+
+\begin{equation}
+    P = \frac{|RET \cap REL|}{|RET|}
+    \label{eq:precision}
+\end{equation}
 
 \subsection{Precisión en K}
+Una alternativa de la precisión es evaluarla sobre un subconjunto de los documentos relevantes y los documentos recuperados. Al aplicar esta métrica lo que se hace es evaluar la precisión considerando una cantidad determinada de documentos. La cantidad de documentos suele ser denominada con la letra $K$. Esta métrica suele ser usada en conjuntos de datos donde no es factible conocer el conjunto de documentos relevantes en su totalidad. La ecuación X presenta cómo se calcula esta métrica.
+
+\begin{equation}
+    P@K = \frac{|RET \cap REL|}{K}
+\end{equation}
 
 \subsection{Recall en K}
+El recall 
 
 \subsection{Precisión-Promedio}
 
