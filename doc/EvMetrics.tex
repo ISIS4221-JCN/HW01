@@ -9,16 +9,23 @@ La precisión es una métrica que permite evaluar qué porcentaje del resultado 
 \end{equation}
 
 \subsection{Precisión en K}
-Una alternativa de la precisión es evaluarla sobre un subconjunto de los documentos relevantes y los documentos recuperados. Al aplicar esta métrica lo que se hace es evaluar la precisión considerando una cantidad determinada de documentos. La cantidad de documentos suele ser denominada con la letra $K$. Esta métrica suele ser usada en conjuntos de datos donde no es factible conocer el conjunto de documentos relevantes en su totalidad. La ecuación X presenta cómo se calcula esta métrica.
+Una alternativa de la precisión es evaluarla sobre un subconjunto de los documentos relevantes y los documentos recuperados. Al aplicar esta métrica lo que se hace es evaluar la precisión considerando una cantidad determinada de documentos. La cantidad de documentos suele ser denominada con la letra $K$. Esta métrica suele ser usada en conjuntos de datos donde no es factible conocer el conjunto de documentos relevantes en su totalidad. La ecuación \ref{eq:precisionatk} presenta cómo se calcula esta métrica.
 
 \begin{equation}
     P@K = \frac{|RET \cap REL|}{K}
+    \label{eq:precisionatk}
 \end{equation}
 
 \subsection{Recall en K}
-El recall 
+El recall es una métrica complementaria a la precisión en la cual se calcula el porcentaje de documentos recuperados que son relevantes en relación a los documentos relevantes. De forma similar a la precisión en K, es posible definir un recall sobre un subconjunto de elementos cuya cardinalidad se denomina igualmente con la letra $K$. No obstante, para el cálculo de esta métrica adicionalmente se tiene en cuenta el número total de documentos relevantes. Es decir, sobre el conjunto de documentos recuperados se extrae un subconjunto con $K$ elementos y sobre dicho subconjunto se evalúa qué porcentaje es relevante en relación al número total de elementos relevantes.
+
+\begin{equation}
+    R@K = \frac{|RET@K \cup REL|}{|REL|}
+    \label{eq:recallatk}
+\end{equation}
 
 \subsection{Precisión-Promedio}
+Esta métrica combina la precisión y el recall para una búsqueda de información clasificada por orden. En esta métrica se calcula el promedio de la precisión sobre los documentos recuperados que son relevantes a la búsqueda. Esto permite obtener una noción de qué tan bien clasificados están los documentos recuperados por el sistema de búsqueda de información.
 
 \subsection{MAP}
 
