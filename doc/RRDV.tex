@@ -10,7 +10,7 @@ El proceso de vectorización de cada documento se obtiene con base en el modelo 
 
 Como retorno se organiza los documentos según la similaridad que presentan. Podría tenerse en cuenta un umbral para descartar documentos con baja similaridad.
 
-\subsubsection{Explicación de la implementación}
+\subsubsection{Implementación}
 Como se solicita en las instrucciones, se inicia con la implementación de una función que permita obtener el vector que representa cada documento con base en el peso $w_{t,d}$. Para ello, se inicia creando una matriz en donde se registra qué términos contiene cada documento con el fin de obtener un vector $idf$, el cual se multiplica con el logaritmo de la suma de 1 con la frecuencia del término asociado en el documento correspondiente.\\
 
 Esta función se utiliza para calcular la similaridad del coseno entre el vector retornado para la consulta y para el documento. Finalmente, se organizan los valores retornados para cada documento para seleccionar aquellos que resultan relevantes.
