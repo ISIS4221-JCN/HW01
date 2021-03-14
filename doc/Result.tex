@@ -17,7 +17,7 @@ La precisión indica qué porcentaje de los documentos recuperados se consideran
     \label{fig:Precision}
 \end{figure}
 
-El \textit{recall}, por su parte evalúa qué porcentaje de los documentos relevantes fueron recuperados. Con esto en mente, se espera que el resultado de esta métrica con las estrategias de disyunción sea muy buena, mientras que en las estrategias de conjunción resulta mala. 
+El \textit{recall}, por su parte evalúa qué porcentaje de los documentos relevantes fueron recuperados. Con esto en mente, se espera que el resultado de esta métrica con las estrategias de disyunción sea muy buena, mientras que en las estrategias de conjunción resulta mala. Esto se debe a que existe la posibilidad de que un documento que no contiene todos los términos de la búsqueda sea relevante, por ejemplos sinónimos. Esto ocasiona que la estrategia de conjunción devuelva un valor mucho menor, pues retorna un porcentaje bajo del total de documentos que debería retornar.
 
 \begin{figure}
     \centering
@@ -25,6 +25,8 @@ El \textit{recall}, por su parte evalúa qué porcentaje de los documentos relev
     \caption{\textit{Recall} de cada estrategia.}
     \label{fig:Recall}
 \end{figure}
+
+
 
 \begin{figure}
     \centering
