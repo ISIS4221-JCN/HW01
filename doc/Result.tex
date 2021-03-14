@@ -45,7 +45,9 @@ El resultado es ideal cuando es 1, pues significa que ambas métricas son perfec
 
 \subsection{Comparación de estrategias clasificadas (\textit{ranked}): RRI, RRDV, GENSIM}
 
-Para evaluar el desempeño de las estrategias de recuperación de la información clasificadas \textit{(ranked)}, se realizó el calculo de las métricas \texttt{P@M}, \texttt{R@M}, \texttt{NDGC@M} y \texttt{MAP} para cada uno de los 35 \textit{queries} en el dataset, donde $M$ representa el número de documentos relevantes en la etiqueta. Para esto se hizo uso de las funciones desarrolladas en la primera parte de este trabajo, las cuales se encuentran en el archivo \texttt{metrics.py}. Como resultado de este proceso se obtuvieron las figuras \ref{fig:rankedP} - \ref{fig:rankedNDCG} y el cuadro \ref{tab:rankedResults} que resume los resultados de todas las estrategias implementadas.
+Para evaluar el desempeño de las estrategias de recuperación de la información clasificadas \textit{(ranked)}, se realizó el calculo de las métricas \texttt{P@M}, \texttt{R@M}, \texttt{NDGC@M} y \texttt{MAP} para cada uno de los 35 \textit{queries} en el dataset, donde $M$ representa el número de documentos relevantes en la etiqueta. Para esto se hizo uso de las funciones desarrolladas en la primera parte de este trabajo, las cuales se encuentran en el archivo \texttt{metrics.py}. Como resultado de este proceso se obtuvieron las figuras \ref{fig:rankedP} - \ref{fig:rankedNDCG} y el cuadro \ref{tab:rankedResults} que resume los resultados promedio de todas las estrategias implementadas. \\
+
+En términos generales, se puede observar que los resultados de todas las estrategias \textit{ranked} son bastante buenos. Salvo por dos \textit{queries}, todas las estrategias son capaces de recuperar al menos un documento relevante
 
 \begin{figure}[H]
     \centering
@@ -53,8 +55,6 @@ Para evaluar el desempeño de las estrategias de recuperación de la informació
     \caption{Resultados de P@M para todas las queries del data set con las estrategias clasificadas (\textit{ranked})}
     \label{fig:rankedP}
 \end{figure}
-
-
 
 \begin{figure}[H]
     \centering
